@@ -1,0 +1,18 @@
+# IDE
+.idea/
+*.iml
+
+# Virtual environment
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+Thumbs.db
+
+# data
+/data/*
+!/data/.gitkeep
