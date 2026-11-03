@@ -8,10 +8,3 @@ def prepare_oscar_nominations(df):
     df = df.dropna(subset=['Year', 'CanonicalCategory', 'Film', 'FilmId'])
 
     return df
-
-def prepare_imdb_titles(df):
-    df = df.dropna(subset=['startYear'])
-    df['startYear'] = df['startYear'].astype(int)
-    df = df[(df['startYear'] >= 1989) & (df['startYear'] <= 2024) & (df['titleType'] == 'movie')]
-
-    return df[['tconst', 'primaryTitle', 'startYear']]
